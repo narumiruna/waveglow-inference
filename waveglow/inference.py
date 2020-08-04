@@ -25,7 +25,7 @@ def synthesize(mel: torch.Tensor,
     global _model
     if _model is None:
         _model = WaveGlow(**_model_config)
-        state_dict = load_state_dict_from_url(_model_url, progress=False)
+        state_dict = load_state_dict_from_url(_model_url, progress=False, map_location=device)
         _model.load_state_dict(state_dict)
         WaveGlow.remove_weightnorm(_model)
 
