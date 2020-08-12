@@ -8,7 +8,7 @@ def parse_requirements(f):
 
 
 def main():
-    setup(name='waveglow',
+    setup(name='waveglow-inference',
           version='0.0.1',
           author='なるみ',
           author_email='weaper@gamil.com',
